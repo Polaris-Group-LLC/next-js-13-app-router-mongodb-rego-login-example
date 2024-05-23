@@ -1,4 +1,4 @@
-import { AddEdit } from '_components/users';
+import { AddEdit } from 'components/users';
 
 export default Add;
 

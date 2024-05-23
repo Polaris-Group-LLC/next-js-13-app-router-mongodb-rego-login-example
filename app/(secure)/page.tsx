@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 
 import { useUserService } from '_services';
-import { Spinner } from '_components';
+import { Spinner } from 'components';
 
 export default Home;
 
@@ -21,7 +21,7 @@ function Home() {
             <>
                 <h1>Hi {user.firstName}!</h1>
                 <p>You&apos;re logged in with Next.js & JWT!!</p>
-                <p><Link href="/users">Manage Users</Link></p>
+                <p><Link href="/knowledge">Knowledge</Link></p>
             </>
         );
     } else {

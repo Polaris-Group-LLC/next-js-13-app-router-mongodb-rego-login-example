@@ -3,8 +3,8 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-import { AddEdit } from '_components/users';
-import { Spinner } from '_components';
+import { AddEdit } from 'components/users';
+import { Spinner } from 'components';
 import { useUserService } from '_services';
 
 export default Edit;

@@ -1,3 +1,7 @@
 .app-container {
     min-height: 350px;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

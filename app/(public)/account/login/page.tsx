@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 import { useUserService } from '_services';
 
@@ -20,7 +21,19 @@ function Login() {
     };
 
     async function onSubmit({ username, password }: any) {
-        await userService.login(username, password);
+        try {
+            const response = await axios.post('http://localhost:8000/login', {
+                username,
+                password
+            });
+            const { access_token } = response.data;
+            // Store the token in local storage or a cookie
+            localStorage.setItem('token', access_token);
+            return true;
+        } catch (error) {
+            console.error('Login failed:', error);
+            return false;
+        }
     }
 
     return (

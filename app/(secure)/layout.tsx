@@ -1,27 +1,20 @@
-import { headers } from 'next/headers';
-import { redirect } from 'next/navigation';
+import { ReactNode } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import { auth } from '_helpers/server';
-import { Alert, Nav } from '_components';
+type LayoutProps = {
+  children: ReactNode;
+};
+
+const Layout = ({ children }: LayoutProps) => {
+  return (
+    <html>
+      <body>
+        <ToastContainer />
+        {children}
+      </body>
+    </html>
+  );
+};
 
 export default Layout;
-
-function Layout({ children }: { children: React.ReactNode }) {
-    // if not logged in redirect to login page
-    if (!auth.isAuthenticated()) {
-        const returnUrl = encodeURIComponent(headers().get('x-invoke-path') || '/');
-        redirect(`/account/login?returnUrl=${returnUrl}`);
-    }
-
-    return (
-        <div className="app-container bg-light">
-            <Nav />
-            <Alert />
-            <div className="p-4">
-                <div className="container">
-                    {children}
-                </div>
-            </div>
-        </div>
-    );
-}
