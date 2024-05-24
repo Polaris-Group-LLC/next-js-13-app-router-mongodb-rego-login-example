@@ -34,24 +34,24 @@ HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 
 export { HoverCard, HoverCardTrigger, HoverCardContent };
 
-interface LeftCtrlButtonProps {
+interface RightCtrlButtonProps {
   imageSrc: string;
   hoverText: string;
 }
 
-const LeftCtrlButton: React.FC<LeftCtrlButtonProps> = ({ imageSrc, hoverText }) => {
+const RightCtrlButton: React.FC<RightCtrlButtonProps> = ({ imageSrc, hoverText }) => {
   return (
     <HoverCard>
       <HoverCardTrigger asChild>
-        <div className="left-ctrl-button">
+        <div className="right-ctrl-button">
           <img
             src={imageSrc}
             alt={hoverText}
-            className="left-ctrl-button-img"
+            className="right-ctrl-button-img"
           />
         </div>
       </HoverCardTrigger>
-      <HoverCardContent className="w-80 standard-border">
+      <HoverCardContent className="w-80 standard-border" side="left">
         <div className="flex justify-between space-x-4">
           <Button className="large-button">
             <img src={imageSrc} alt={hoverText} className="large-button-img" />
@@ -74,4 +74,4 @@ const LeftCtrlButton: React.FC<LeftCtrlButtonProps> = ({ imageSrc, hoverText }) 
   );
 };
 
-export default LeftCtrlButton;
+export default RightCtrlButton;

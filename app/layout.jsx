@@ -9,6 +9,7 @@ import Draggable from 'react-draggable';
 import CleoChatComponent from '@/components/CleoChatComponent';
 import { Avatar } from "@/components/ui/avatar";
 import LeftCtrlButton from '@/components/ui/LeftCtrlButton';
+import RightCtrlButton from '@/components/ui/RightCtrlButton';
 
 export default function Layout() {
   return (
@@ -32,11 +33,11 @@ export default function Layout() {
             <Avatar src="/images/avatar.png" alt="@shadcn" className="w-10 h-10" initials="CN" />
           </div>
           <div className="flex flex-col w-[40px] mr-0 mt-[40px] font-montserrat">
-            <LeftCtrlButton imageSrc="/icons/icon1.png" hoverText="Description 1" />
+            <LeftCtrlButton imageSrc="/icons/icon23.png" hoverText="Description 1" />
             <LeftCtrlButton imageSrc="/icons/icon2.png" hoverText="Description 2" />
             <LeftCtrlButton imageSrc="/icons/icon3.png" hoverText="Description 3" />
             <LeftCtrlButton imageSrc="/icons/icon4.png" hoverText="Description 4" />
-            <LeftCtrlButton imageSrc="/icons/icon5.png" hoverText="Description 5" />
+            <LeftCtrlButton imageSrc="/icons/icon25.png" hoverText="Description 5" />
             <LeftCtrlButton imageSrc="/icons/icon6.png" hoverText="Description 6" />
             <LeftCtrlButton imageSrc="/icons/icon7.png" hoverText="Description 7" />
             <LeftCtrlButton imageSrc="/icons/icon8.png" hoverText="Description 8" />
@@ -59,47 +60,12 @@ export default function Layout() {
           </div>
           <div className="flex flex-col w-[50px] mr-0 font-montserrat">
             <div className="bg-[#000000] text-white h-[40px] flex items-center justify-center" />
-            <div className="flex flex-col bg-[#000000] text-white h-[40px] rounded-tl-none rounded-bl-none rounded-tr-lg rounded-br-lg border-2 border-[#ECA902] p-4 items-center justify-center ml-auto">
-              <img
-                alt="Icon"
-                className="icon"
-                height={45}
-                src="/placeholder.svg"
-                style={{
-                  aspectRatio: "45/45",
-                  objectFit: "cover",
-                }}
-                width={45}
-              />
-            </div>
+
             <div>
-              <div className="flex flex-col bg-[#000000] text-white h-[40px] rounded-tl-none rounded-bl-none rounded-tr-lg rounded-br-lg border-2 border-[#ECA902] p-4 items-center justify-center ml-auto">
-                <img
-                  alt="Icon"
-                  className="icon"
-                  height={45}
-                  src="/placeholder.svg"
-                  style={{
-                    aspectRatio: "45/45",
-                    objectFit: "cover",
-                  }}
-                  width={45}
-                />
-              </div>
+              <RightCtrlButton imageSrc="/icons/icon25.png" hoverText="Description 5" />
+              
               <div>
-                <div className="flex flex-col bg-[#000000] text-white h-[40px] rounded-tl-none rounded-bl-none rounded-tr-lg rounded-br-lg border-2 border-[#ECA902] p-4 items-center justify-center ml-auto">
-                  <img
-                    alt="Icon"
-                    className="icon"
-                    height={45}
-                    src="/placeholder.svg"
-                    style={{
-                      aspectRatio: "45/45",
-                      objectFit: "cover",
-                    }}
-                    width={45}
-                  />
-                </div>
+                
               </div>
             </div>
           </div>
@@ -107,4 +73,4 @@ export default function Layout() {
       </body>
     </html>
   );
-}
+} 

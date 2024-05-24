@@ -1,3 +1,11 @@
+/* Standard border class */
+.standard-border {
+    border: 4px solid #217caf;
+    border-radius: 0.375rem; /* lg-rounded */
+  }
+
+
+
 .app-container {
     min-height: 350px;
 }
@@ -52,11 +60,11 @@
     justify-content: center;
     position: relative;
     border-radius: 0.375rem 0 0 0.375rem; /* rounded-tl-lg rounded-bl-lg */
-    border-right: none; /* Ensure no border on the right */
     background: none;
     width: 40px;
     height: 40px;
     border: 2px solid #12b656;
+    border-right: none; /* Ensure no border on the right */
     margin-bottom: 1px;
     overflow: hidden;
   }
@@ -69,11 +77,11 @@
   
   /* Popup text colors */
   .popup-text {
-    color: #333; /* Default text color */
+    color: #fff; /* Default text color */
   }
   
   .popup-text-muted {
-    color: #888; /* Muted text color */
+    color: #fff; /* Muted text color */
   }
   
   /* Large button styles */
@@ -90,3 +98,50 @@
     max-height: 40px;
     object-fit: cover;
   }
+
+  /* General styles for RightCtrlButton */
+.right-ctrl-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 0 0.375rem 0.375rem 0; /* rounded-tr-lg rounded-br-lg */
+
+    background: none;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ECA902;
+    border-left: none; /* Ensure no border on the left */
+    margin-bottom: 1px;
+    overflow: hidden;
+  }
+  
+  .right-ctrl-button-img {
+    max-width: 20px;
+    max-height: 20px;
+    display: block;
+  }
+  
+  /* Popup text colors */
+  .popup-text {
+    color: #fff; /* Default text color */
+  }
+  
+  .popup-text-muted {
+    color: #fff; /* Muted text color */
+  }
+  
+  /* Large button styles */
+  .large-button {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.large-button-img {
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: cover;
+}
