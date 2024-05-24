@@ -44,3 +44,49 @@
   height: 10px;
   cursor: nwse-resize;
 }
+
+/* General styles for LeftCtrlButton */
+.left-ctrl-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 0.375rem 0 0 0.375rem; /* rounded-tl-lg rounded-bl-lg */
+    border-right: none; /* Ensure no border on the right */
+    background: none;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #12b656;
+    margin-bottom: 1px;
+    overflow: hidden;
+  }
+  
+  .left-ctrl-button-img {
+    max-width: 20px;
+    max-height: 20px;
+    display: block;
+  }
+  
+  /* Popup text colors */
+  .popup-text {
+    color: #333; /* Default text color */
+  }
+  
+  .popup-text-muted {
+    color: #888; /* Muted text color */
+  }
+  
+  /* Large button styles */
+  .large-button {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .large-button-img {
+    max-width: 40px;
+    max-height: 40px;
+    object-fit: cover;
+  }
