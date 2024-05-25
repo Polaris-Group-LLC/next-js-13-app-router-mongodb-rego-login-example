@@ -20,6 +20,7 @@ button {
   justify-content: center;
   color: var(--violet-11);
   box-shadow: 0 2px 10px var(--black-a7);
+  margin-bottom: 10px; /* Add some space below the button */
 }
 .IconButton[data-state='closed'] {
   background-color: white;
@@ -32,6 +33,34 @@ button {
 }
 .IconButton:focus {
   box-shadow: 0 0 0 2px black;
+}
+
+.CollapsibleContent {
+  overflow: hidden;
+}
+.CollapsibleContent[data-state='open'] {
+  animation: slideDown 300ms ease-out;
+}
+.CollapsibleContent[data-state='closed'] {
+  animation: slideUp 300ms ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
 }
 
 .Text {

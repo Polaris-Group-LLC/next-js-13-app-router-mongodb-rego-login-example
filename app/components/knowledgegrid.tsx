@@ -3,6 +3,7 @@ import * as Collapsible from '@radix-ui/react-collapsible';
 import { RowSpacingIcon, Cross2Icon } from '@radix-ui/react-icons';
 import './knowledgegrid.css';
 import { ResizablePanel, ResizableHandle, ResizablePanelGroup } from "@/components/ui/resizable"
+import DatabaseMenu from './data/DatabaseMenu';
 
 export default function Component() {
   return (
@@ -11,9 +12,10 @@ export default function Component() {
       direction="horizontal"
     >
       <ResizablePanel defaultSize={20}>
-        <div className="flex h-full items-center justify-center p-6">
-          <span className="font-semibold">Databases</span>
-        </div>
+      <div className="flex h-full flex-col items-lef p-6" style={{overflow: 'hidden' }}>
+              <p style={{ color: 'white' }}>Knowledge</p>
+                <DatabaseMenu />
+            </div>
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize={20}>
