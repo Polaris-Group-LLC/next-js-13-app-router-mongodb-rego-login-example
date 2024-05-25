@@ -2,9 +2,10 @@ import { assistantId } from "@/assistant-config";
 import { openai } from "@/openai";
 import { NextApiRequest } from 'next';
 import { IncomingForm } from 'formidable';
+import { NextRequest, NextResponse } from 'next/server';
 
 // upload file to assistant's vector store
-export async function POST(request: NextApiRequest) {
+export async function POST(request: NextRequest) {
   const form = new IncomingForm();
   const data = await new Promise((resolve, reject) => {
     form.parse(request, (err, fields, files) => {
@@ -30,7 +31,7 @@ export async function POST(request: NextApiRequest) {
 }
 
 // list files in assistant's vector store
-export async function GET() {
+export async function GET(request: NextRequest) {
   const vectorStoreId = await getOrCreateVectorStore(); // get or create vector store
   const fileList = await openai.beta.vectorStores.files.list(vectorStoreId);
 
@@ -52,7 +53,7 @@ export async function GET() {
 }
 
 // delete file from assistant's vector store
-export async function DELETE(request) {
+export async function DELETE(request: NextRequest) {
   const body = await request.json();
   const fileId = body.fileId;
 
