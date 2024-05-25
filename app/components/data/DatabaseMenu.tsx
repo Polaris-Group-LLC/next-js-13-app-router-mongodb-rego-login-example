@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Checkbox } from "@/components/ui/checkbox"
+import * as Checkbox from '@radix-ui/react-checkbox';
+import { CheckIcon } from '@radix-ui/react-icons';
 
 interface DatabaseCollections {
   [key: string]: string[];
@@ -8,9 +9,29 @@ interface DatabaseCollections {
 
 const DatabaseItem = ({ dbName, collections }: { dbName: string; collections: string[] }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [checked, setChecked] = useState(true); // Initialize as checked
+  const [collectionChecks, setCollectionChecks] = useState<{ [key: string]: boolean }>({});
+
+  useEffect(() => {
+    // Initialize all collection checkboxes to true
+    const initialChecks = collections.reduce((acc, collection) => {
+      acc[collection] = true; // Ensure all are checked by default
+      return acc;
+    }, {});
+    setCollectionChecks(initialChecks);
+  }, [collections]);
+
+  const handleCollectionCheckChange = (collection: string, isChecked: boolean) => {
+    setCollectionChecks(prev => ({ ...prev, [collection]: isChecked }));
+  };
 
   return (
     <li>
+      <Checkbox.Root className="checkbox-root" checked={checked} onCheckedChange={setChecked}>
+        <Checkbox.Indicator className="checkbox-indicator">
+          <CheckIcon />
+        </Checkbox.Indicator>
+      </Checkbox.Root>
       <span className={`db-text ${isOpen ? 'db-text-open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
         <span className={isOpen ? "triangle-down" : "triangle-right"}></span>
         {dbName}
@@ -18,7 +39,14 @@ const DatabaseItem = ({ dbName, collections }: { dbName: string; collections: st
       {isOpen && (
         <ul>
           {collections.map((collection) => (
-            <li key={collection} className="collection-text">{collection}</li>
+            <li key={collection} className="collection-text">
+              <Checkbox.Root className="checkbox-root" checked={collectionChecks[collection]} onCheckedChange={(state) => handleCollectionCheckChange(collection, state)}>
+                <Checkbox.Indicator className="checkbox-indicator">
+                  <CheckIcon />
+                </Checkbox.Indicator>
+              </Checkbox.Root>
+              {collection}
+            </li>
           ))}
         </ul>
       )}

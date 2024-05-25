@@ -1,17 +1,57 @@
-[data-state='unchecked'] {
+.checkbox-root {
+  appearance: none;
   background-color: #fff;
-  border-color: #ccc;
+  border: 1px solid #ccc;
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
 }
 
-[data-state='unchecked']:active {
-  background-color: #f0f0f0;
-  border-color: #d1d1d1;
-}
-
-[data-state='checked'] {
+.checkbox-root[data-state='checked'] {
+  border-color: #005fcc;
   background-color: #007bff;
-  border-color: #0056b3;
 }
+
+.checkbox-root[data-state='indeterminate'] {
+  border-color: #005fcc;
+  background-color: #007bff;
+}
+
+.checkbox-root[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkbox-root:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.checkbox-indicator {
+  color: #fff;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-root[data-state='unchecked'] .checkbox-indicator {
+  visibility: hidden;
+}
+
+.checkbox-root[data-state='indeterminate'] .checkbox-indicator {
+  /* Optional: Style for indeterminate state if using a different icon */
+}
+
+
 
 .db-text {
   font-size: 1.2rem;
@@ -30,7 +70,7 @@
 .collection-text {
   font-size: 1rem;
   color: #666;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 .triangle-right {
