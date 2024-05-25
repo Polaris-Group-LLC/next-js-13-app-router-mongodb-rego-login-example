@@ -1,4 +1,5 @@
 'use client';
+import { MinusIcon, PlusIcon } from '@heroicons/react/outline';
 import React, { useState, useRef, useEffect } from 'react';
 
 const ResizablePanel = () => {
