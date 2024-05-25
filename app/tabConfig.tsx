@@ -9,7 +9,18 @@ export function TabsDemo() {
         title: "Product",
         value: "product",
         content: (
-          <div className="tab-content" style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', maxHeight: '100%' }}>
+            <div 
+            className="tab-content" 
+            style={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              overflow: 'hidden', 
+              maxHeight: '100%', 
+              borderTopLeftRadius: '0.5rem',  // Adjust the radius as needed
+              borderTopRightRadius: '0.5rem', // Adjust the radius as needed
+              borderBottomRightRadius: '0.5rem', // Adjust the radius as needed
+              borderBottomLeftRadius: '0.5rem', // Adjust the radius as needed
+            }}>
             <div className="flex flex-col items-center flex-grow border-2" style={{overflow: 'hidden' }}>
               <p style={{ color: 'white' }}>Product Tab</p>
             </div>
