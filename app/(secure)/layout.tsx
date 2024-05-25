@@ -6,15 +6,11 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <html>
-      <body>
-        <ToastContainer />
-        {children}
-      </body>
-    </html>
+    <div>
+      {children}
+    </div>
   );
 };
-
 export default Layout;
