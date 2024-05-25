@@ -58,7 +58,6 @@ const ResizablePanels = () => {
               </button>
             </div>
           </Panel>
-          {index < panelRefs.length - 1 && <div className="spacer-20"></div>}
           {index < panelRefs.length - 1 && <PanelResizeHandle className="resize-handle" />}
         </React.Fragment>
       ))}
