@@ -25,9 +25,19 @@ const DatabaseItem = ({ dbName, collections }: { dbName: string; collections: st
     setCollectionChecks(prev => ({ ...prev, [collection]: isChecked }));
   };
 
+  const handleDbCheckboxChange = (isChecked: boolean) => {
+    setChecked(isChecked);
+    // Update all collection checkboxes based on the DB checkbox state
+    const updatedChecks = Object.keys(collectionChecks).reduce((acc, collection) => {
+      acc[collection] = isChecked;
+      return acc;
+    }, {});
+    setCollectionChecks(updatedChecks);
+  };
+
   return (
     <li>
-      <Checkbox.Root className="checkbox-root" checked={checked} onCheckedChange={setChecked}>
+      <Checkbox.Root className="checkbox-root" checked={checked} onCheckedChange={handleDbCheckboxChange}>
         <Checkbox.Indicator className="checkbox-indicator">
           <CheckIcon />
         </Checkbox.Indicator>
