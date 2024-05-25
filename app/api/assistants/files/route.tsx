@@ -1,11 +1,19 @@
 import { assistantId } from "@/assistant-config";
 import { openai } from "@/openai";
-import { Request } from 'express'; // Import the Request type from express
+import { NextApiRequest } from 'next';
+import { IncomingForm } from 'formidable';
 
 // upload file to assistant's vector store
-export async function POST(request: Request) {
-  const formData = await request.formData(); // process file as FormData
-  const file = formData.get("file"); // retrieve the single file from FormData
+export async function POST(request: NextApiRequest) {
+  const form = new IncomingForm();
+  const data = await new Promise((resolve, reject) => {
+    form.parse(request, (err, fields, files) => {
+      if (err) reject(err);
+      resolve({ fields, files });
+    });
+  });
+
+  const file = data.files.file; // assuming 'file' is the name of the file field
   const vectorStoreId = await getOrCreateVectorStore(); // get or create vector store
 
   // upload using the file stream
