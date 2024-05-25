@@ -1,18 +1,12 @@
-'use client';
-import React from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import DatabaseMenu from 'components/data/DatabaseMenu';
 
-const Page: React.FC = () => {
-  const notify = () => toast("This is a toast notification!");
-
+const App = () => {
   return (
     <div>
-      <h1>Welcome to the Knowledge Page</h1>
-      <p>This is a template page with some placeholder text.</p>
-      <button onClick={notify}>Show Toast</button>
+      <h1>Database Explorer</h1>
+      <DatabaseMenu />
     </div>
   );
 };
 
-export default Page;
+export default App;

@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { Tabs } from "components/ui/tabs";
+import DatabaseMenu from './components/data/DatabaseMenu';
 
 export function TabsDemo() {
     const tabs = [
       {
-        title: "Product",
-        value: "product",
+        title: "Knowledge",
+        value: "knowledge",
         content: (
             <div 
             className="tab-content" 
@@ -22,7 +23,8 @@ export function TabsDemo() {
               borderBottomLeftRadius: '0.5rem', // Adjust the radius as needed
             }}>
             <div className="flex flex-col items-center flex-grow border-2" style={{overflow: 'hidden' }}>
-              <p style={{ color: 'white' }}>Product Tab</p>
+              <p style={{ color: 'white' }}>Knowledge</p>
+                <DatabaseMenu />
             </div>
           </div>
         )
