@@ -50,13 +50,17 @@
 }
 
 .panel-content {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: center; /* Center items horizontally */
     padding: 10px;
     text-align: center;
     position: relative;
-    width: 100%;
+    width: calc(100% + 40px); /* Adjust width to include left-column */
     height: 100%;
     overflow: auto;
     color: white;
+    margin-left: -40px; /* Offset the left-column width */
 }
 
 .resize-handle {
@@ -67,17 +71,11 @@
     z-index: 10; /* Ensure handles are above other elements */
 }
 
-.spacer-20 {
-    width: 0px;
-    background-color: transparent;
-    border-color: 2px solid #af2153;
-}
-
 .toggle-button {
     background-color: transparent;
     color: #217CAF;
     border: none;
-    padding: 3pxpx;
+    padding: 3px;
     cursor: pointer;
     margin-bottom: 10px;
 }
