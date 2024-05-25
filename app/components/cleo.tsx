@@ -15,4 +15,4 @@ const ResizablePanel = () => {
   );
 };
 
-export default ResizablePanel;
+export default ResizablePanel;  
