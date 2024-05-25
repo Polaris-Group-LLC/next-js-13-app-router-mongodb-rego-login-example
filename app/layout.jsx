@@ -55,9 +55,13 @@ export default function Layout() {
               <TabsDemo />
           </div>
           <div className="flex flex-col w-[50px] mr-0 font-montserrat">
-            <div className="bg-[#000000] text-white h-[40px] flex items-center justify-center" />
+            <div className="bg-[#000000] text-white h-[50px] flex items-center justify-center" />
             <div>
-              <RightCtrlButton imageSrc="/icons/icon25.png" hoverText="Description 5" />
+            <RightCtrlButton 
+              imageSrc="/icons/icon25.png" 
+              hoverText="Description 5" 
+              style={{ marginTop: '5px' }}
+            />
               
               <div>
                 
