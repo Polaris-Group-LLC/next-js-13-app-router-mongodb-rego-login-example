@@ -1,3 +1,23 @@
+
+/*Tabs */
+/* Container for the tabs */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+/* Styling for the content area */
+.content {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
 /* Standard border class */
 .standard-border {
     border: 4px solid #217caf;

@@ -19,7 +19,7 @@ export default function Layout() {
       <body>
         <div
           key="1"
-          className="border-4 border-[#FFFF00] rounded-lg p-1 bg-gradient-to-b from-[#000000] to-[#071b26] min-h-screen flex flex-row relative pt-20 pb-2 pl-3 pr-3"
+          className="border-4 border-[#FFFF00] rounded-lg p-1 bg-gradient-to-b from-[#000000] to-[#217CAF] min-h-screen flex flex-row relative pt-20 pb-2 pl-3 pr-3"
         >
           <div className="absolute top-0 left-0 w-full text-white py-2 px-4 z-10 flex justify-between items-center">
             <img
@@ -51,11 +51,20 @@ export default function Layout() {
               <CleoChatComponent />
             </div>
           </div>
-          <div className="flex flex-col h-100 w-full mr-0 font-montserrat">
+          <div className="flex flex-col w-full">
+            <div className="flex gap-0">
+              <div className="bg-[#000000] text-white h-[40px] rounded-tl-lg rounded-tr-lg rounded-bl-none rounded-br-none p-2 flex items-center flex-1 font-montserrat border-4 border-green-500" />
+              <div className="bg-[#000000] text-white h-[40px] rounded-tl-lg rounded-tr-lg rounded-bl-none rounded-br-none p-2 flex items-center flex-1 font-montserrat" />
+              <div className="bg-[#000000] text-white h-[40px] rounded-tl-lg rounded-tr-lg rounded-bl-none rounded-br-none p-2 flex items-center flex-1 font-montserrat" />
+              <div className="bg-[#000000] text-white h-[40px] rounded-tl-lg rounded-tr-lg rounded-bl-none rounded-br-lg p-2 flex items-center w-[25px] font-montserrat" />
+            </div>
+            <div className="bg-[#000000] text-white flex-1 rounded-lg border-4 border-[#12b656] mt-[-8px] p-6 rounded-br-lg rounded-bl-none rounded-tl-none font-montserrat grid grid-cols-[100%] max-w-full max-h-90% overflow-hidden">
               <TabsDemo />
+            </div>
           </div>
           <div className="flex flex-col w-[50px] mr-0 font-montserrat">
             <div className="bg-[#000000] text-white h-[40px] flex items-center justify-center" />
+
             <div>
               <RightCtrlButton imageSrc="/icons/icon25.png" hoverText="Description 5" />
               
