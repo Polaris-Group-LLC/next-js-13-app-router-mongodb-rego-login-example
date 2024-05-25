@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Tabs } from "components/ui/tabs";
 import DatabaseMenu from './components/data/DatabaseMenu';
 import knowledgegrid from './components/knowledgeGrid';
+import ResizablePanels from './components/kg2';
 
 export function TabsDemo() {
     const tabs = [
@@ -25,7 +26,7 @@ export function TabsDemo() {
             }}>
             <div className="flex flex-col items-center flex-grow border-2" style={{overflow: 'hidden' }}>
               <p style={{ color: 'white' }}>Knowledge</p>
-                <DatabaseMenu />
+                <ResizablePanels />
             </div>
           </div>
         )
@@ -45,12 +46,18 @@ export function TabsDemo() {
         )
       },
       {
-        title: "Playground",
-        value: "playground",
+        title: "KG2",
+        value: "kg2",
         content: (
-          <div className="tab-content">
-            <p>Playground tab</p>
-            <DummyContent />
+          <div className="tab-content" style={{ height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div style={{
+              width: 'calc(100% - 20px)',
+              height: 'calc(100% - 20px)',
+              boxSizing: 'border-box',
+              overflow: 'hidden'
+            }}>
+              <ResizablePanels />
+            </div>
           </div>
         ),
       },
