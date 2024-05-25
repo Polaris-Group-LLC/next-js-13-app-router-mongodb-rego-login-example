@@ -1,12 +1,12 @@
 .tab {
   padding: 0rem;
-  height: 2.5rem;
-  margin-top: 0px;
+  height: 2.25rem;
+  margin-top: 7px;
   margin-left: 1px;
   border: 2px solid transparent;
   border-bottom: none;
   border-color: #217baf8d;
-  font-weight: 600;
+  font-weight: 400;
   color: #ffffffaf;
   border-radius: 0.5rem 0.5rem 0 0;
 }
@@ -14,12 +14,13 @@
 .tab.active {
   border-color: #217CAF;
   background-color: #217CAF;
-  height: 2.5rem;
+  height: calc(2.25rem + 7px);
   margin-top: 0px;
   border: 2px solid transparent;
+  border-bottom: 4px solid transpar;
   color: #fff;
   font-weight: 800;
-  margin-left: 3px;
+  margin-left: 1px;
 }
 /*Tabs */
 /* Container for the tabs */
