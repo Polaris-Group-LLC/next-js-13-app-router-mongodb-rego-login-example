@@ -1,22 +1,30 @@
-.panel-wrapper {
-  display: flex;
-  flex-direction: row;
+.panel6-content {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
 }
-.left-column {
-  width: 40px;
-  background-color: transparent;
-  border: 2px solid #af21a3;
-  border-right: 0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+
+.panel6-content p {
+  font-size: 16px;
+  line-height: 1.5;
 }
-.panel-content {
-  flex: 1;
-  background-color: transparent;
-  border: 2px solid #af21a3;
-  border-left: 0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 10px;
-  color: white;
+
+.panel6-content button {
+  background-color: #008CBA; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the button inline-block */
+  font-size: 16px; /* Increase font size */
+  margin: 10px 0; /* Some margin */
+  cursor: pointer; /* Pointer/hand icon */
+  border-radius: 5px; /* Rounded corners */
+  transition-duration: 0.4s; /* Transition effect */
+}
+
+.panel6-content button:hover {
+  background-color: #005f73; /* Darker blue background on hover */
+  color: white; /* White text */
 }

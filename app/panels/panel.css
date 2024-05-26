@@ -1,0 +1,15 @@
+.panel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 35px;
+    margin-right: 0px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc; /* Thin grey border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff00; /* Optional: light background color */
+    overflow: hidden;
+    color: #fff; /* Dark grey text color */
+}

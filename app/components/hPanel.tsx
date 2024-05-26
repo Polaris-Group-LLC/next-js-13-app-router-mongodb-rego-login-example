@@ -1,7 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-import { FaTimes, FaAngleRight } from 'react-icons/fa';
+import { FaAngleRight } from 'react-icons/fa';
 import './hPanel.css';
+import Panel1 from '@/panels/p1/Panel1';
+import Panel2 from '@/panels/p2/Panel2';
+import Panel3 from '@/panels/p3/Panel3';
+import Panel4 from '@/panels/p4/Panel4';
+import Panel5 from '@/panels/p5/Panel5';
+import Panel6 from '@/panels/p6/Panel6';
 
 const hPanel = () => {
   const panelRefs = Array.from({ length: 6 }, () => useRef(null));
@@ -24,14 +30,14 @@ const hPanel = () => {
 
   const togglePanel = (index: number) => {
     const panel = panelRefs[index].current;
-    if (panel.isCollapsed()) {
+    if (panel && panel.isCollapsed()) {
       panel.expand();
       setCollapsed(prev => {
         const newCollapsed = [...prev];
         newCollapsed[index] = false;
         return newCollapsed;
       });
-    } else {
+    } else if (panel) {
       panel.collapse();
       setCollapsed(prev => {
         const newCollapsed = [...prev];
@@ -52,10 +58,12 @@ const hPanel = () => {
           </div>
           <Panel ref={ref} defaultSize={sizes[index]} className="panel" collapsible>
             <div className="panel-content">
-              Panel {index + 1}
-              <button onClick={() => togglePanel(index)} className="close-button">
-                <FaTimes />
-              </button>
+              {index === 0 && <Panel1 />}
+              {index === 1 && <Panel2 />}
+              {index === 2 && <Panel3 />}
+              {index === 3 && <Panel4 />}
+              {index === 4 && <Panel5 />}
+              {index === 5 && <Panel6 />}
             </div>
           </Panel>
           {index < panelRefs.length - 1 && <PanelResizeHandle className="resize-handle" />}
@@ -66,4 +74,3 @@ const hPanel = () => {
 };
 
 export default hPanel;
-

@@ -23,11 +23,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    width: 30px;
     margin-bottom: 10px;
     background-color: transparent;
     position: relative;
-    border: 2px solid #af21a3;
+    border: 2px solid #12b656;
     border-right: 0px;
     border-top-left-radius: 10px; /* Adjust the value as needed */
     border-bottom-left-radius: 10px; /* Adjust the value as needed */
@@ -43,7 +43,7 @@
     position: relative;
     flex: 1;
     overflow: hidden;
-    border: 2px solid #af21a3;
+    border: 2px solid #12b656;
     border-left: 0px;
     border-top-right-radius: 10px; /* Adjust the value as needed */
     border-bottom-right-radius: 10px; /* Adjust the value as needed */

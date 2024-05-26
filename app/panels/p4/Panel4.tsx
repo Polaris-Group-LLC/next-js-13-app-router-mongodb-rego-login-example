@@ -1,15 +1,16 @@
 import React from 'react';
+import PanelTemplate from '../PanelTemplate';
 import './Panel4.css';
-const Panel4 = () => {
+
+const Panel4: React.FC = () => {
   return (
-    <div className="panel-wrapper">
-      <div className="left-column">
-        <button className="toggle-button">Toggle</button>
+    <PanelTemplate title="Panel 4">
+      <div className="panel4-content">
+        <p>This is some additional content for Panel 4.</p>
+        <button onClick={() => alert('Button in Panel 4 clicked!')}>Click Me</button>
       </div>
-      <div className="panel-content">
-        <p>Content for Panel 4</p>
-      </div>
-    </div>
+    </PanelTemplate>
   );
 };
+
 export default Panel4;

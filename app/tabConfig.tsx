@@ -33,7 +33,7 @@ export function TabsDemo() {
             <div className="flex flex-col items-center flex-grow border-2" style={{ minHeight: '0', overflow: 'hidden' }}>
               <p style={{ color: 'white' }}>Grid Tab</p>
               <div className="flex flex-col w-full items-center flex-grow border-2" style={{overflow: 'hidden' }}>
-              {knowledgegrid()} {/* Using the imported function */}
+              {/*knowledgegrid()} {/* Using the imported function */}
             </div>
             </div>
           </div>
