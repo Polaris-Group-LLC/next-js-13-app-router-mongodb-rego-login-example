@@ -1,5 +1,6 @@
 import React from 'react';
 import './Panel1.css';
+import DatabaseMenu from '@/components/data/DatabaseMenu';
 const Panel1 = () => {
   return (
     <div className="panel-wrapper">

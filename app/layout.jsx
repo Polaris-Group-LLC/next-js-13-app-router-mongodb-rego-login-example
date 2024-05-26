@@ -7,7 +7,6 @@
 import React from 'react';
 import { TabsDemo } from '@/tabConfig';
 import './globals.css';
-import Draggable from 'react-draggable';
 import CleoChatComponent from '@/components/CleoChatComponent';
 import { Avatar } from "@/components/ui/avatar";
 import LeftCtrlButton from '@/components/ui/LeftCtrlButton';

@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { Tabs } from "components/ui/tabs";
 import DatabaseMenu from './components/data/DatabaseMenu';
-import knowledgegrid from './components/knowledgeGrid';
+import knowledgegrid from './components/KnowledgeGrid';
 import ResizablePanels from './components/kg2';
+import HPanel from './components/hPanel';
 
 export function TabsDemo() {
     const tabs = [
@@ -12,24 +13,17 @@ export function TabsDemo() {
         title: "Knowledge",
         value: "knowledge",
         content: (
-            <div 
-            className="tab-content" 
-            style={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              overflow: 'hidden', 
-              maxHeight: '100%', 
-              borderTopLeftRadius: '0.5rem',
-              borderTopRightRadius: '0.5rem',
-              borderBottomRightRadius: '0.5rem',
-              borderBottomLeftRadius: '0.5rem',
+          <div className="tab-content" style={{ height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div style={{
+              width: 'calc(100% - 20px)',
+              height: 'calc(100% - 20px)',
+              boxSizing: 'border-box',
+              overflow: 'hidden'
             }}>
-            <div className="flex flex-col items-center flex-grow border-2" style={{overflow: 'hidden' }}>
-              <p style={{ color: 'white' }}>Knowledge</p>
-                <ResizablePanels />
+              <HPanel />
             </div>
           </div>
-        )
+        ),
       },
       {
         title: "Grid",
