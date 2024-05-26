@@ -1,0 +1,9 @@
+.toolbar-knowledge {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 0px;
+    background-color: #000;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}

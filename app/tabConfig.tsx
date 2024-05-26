@@ -6,6 +6,7 @@ import DatabaseMenu from './components/data/DatabaseMenu';
 import knowledgegrid from './components/KnowledgeGrid';
 import ResizablePanels from './components/kg2';
 import HPanel from './components/hPanel';
+import ToolbarKnowledge from './components/ToolbarKnowledge';
 
 export function TabsDemo() {
     const tabs = [
@@ -20,6 +21,7 @@ export function TabsDemo() {
               boxSizing: 'border-box',
               overflow: 'hidden'
             }}>
+              <ToolbarKnowledge />
               <HPanel />
             </div>
           </div>
